@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Emon Top Up — Game Top-Up</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="login-logo">MT</div>
+    <h1>Emon Top Up</h1>
+    <p>আগে Login করুন, তারপর Top-Up করুন</p>
+    <form id="loginForm">
+      <label>Email / Mobile</label><input id="loginUser" required placeholder="Email বা 01XXXXXXXXX">
+      <label>Password</label><input id="loginPass" type="password" required placeholder="Password">
+      <button class="login-btn">Login</button>
+    </form>
+    <button id="showRegister" class="link-btn">নতুন অ্যাকাউন্ট খুলুন</button>
+    <div id="registerBox" hidden>
+      <hr><h3>Register</h3>
+      <input id="regName" placeholder="আপনার নাম">
+      <input id="regUser" placeholder="Email / Mobile">
+      <input id="regPass" type="password" placeholder="Password">
+      <button id="registerBtn" class="login-btn">Register</button>
+    </div>
+    <small>ডেমো সাইট: নিরাপদ production account-এর জন্য backend/database প্রয়োজন।</small>
+  </div>
+</div>
+
+<div id="siteContent" class="site-locked">
+<header class="topbar">
+  <div class="brand"><div class="brand-mark">MT</div><div><b>Emon</b><span>TopUp</span></div></div>
+  <nav><a href="#games">Games</a><a href="#support">Support</a><button id="logout">Logout</button></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div><p class="eyebrow">FAST • EASY • BANGLADESH</p><h1>Game Top-Up</h1><p>Free Fire, PUBG ও অন্যান্য গেমের Top-Up service.</p></div>
+  <div class="hero-badge">২৪/৭<br><b>Top-Up</b></div>
+</section>
+
+<section id="games" class="section">
+<h2>New Game Top-Up</h2>
+<div class="game-grid">
+<button class="game-card" data-target="ff"><div class="game-art ff">FREE FIRE</div><strong>Free Fire (ID CODE)</strong><small>Diamond / Weekly / Monthly</small></button>
+<button class="game-card" data-target="like"><div class="game-art likes">200<br>LIKE</div><strong>Free Fire - 200 Like প্রতিদিন</strong><small>Like Packages</small></button>
+<button class="game-card" data-target="unipin"><div class="game-art unipin">UNIPIN</div><strong>FF UNIPIN VOUCHER</strong><small>Diamond Voucher</small></button>
+<button class="game-card" data-target="evo"><div class="game-art evo">EVO<br>ACCESS</div><strong>Evo Access (ID CODE)</strong><small>3D / 7D / 30D</small></button>
+<button class="game-card" data-target="level"><div class="game-art level">LEVEL<br>UP</div><strong>New Level Up Pass</strong><small>Level 6–30</small></button>
+<button class="game-card" data-target="pubg"><div class="game-art pubg">PUBG<br>UC</div><strong>PUBG MOBILE UC</strong><small>UC Packages</small></button>
+</div>
+</section>
+
+<section id="shop" class="panel">
+<div class="step-title"><span>1</span><h2 id="productTitle">Free Fire (ID CODE)</h2></div>
+<label>Player ID</label><input id="playerId" inputmode="numeric" placeholder="Enter player id">
+
+<div class="step-title space"><span>2</span><h2>Select Recharge</h2></div>
+<div id="packages" class="package-grid"></div>
+
+<div class="step-title space"><span>3</span><h2>Select Payment</h2></div>
+<div class="payments">
+<button class="payment active">💳 bKash / Nagad<br><b>Payment Now</b></button>
+<button class="payment">⚡ EPS Payment</button>
+<button class="payment">MT Wallet<br><small>৳ 0</small></button>
+</div>
+
+<div class="pay-info">
+<h3>Payment Numbers</h3>
+<div class="number-grid">
+<div><b>bKash</b><strong>01344839207</strong></div>
+<div><b>Nagad</b><strong>01960261023</strong></div>
+</div>
+<p>Payment করার পর Transaction ID দিন। Buy Now চাপলে WhatsApp-এ অর্ডারের তথ্য প্রস্তুত হবে।</p>
+<input id="trx" placeholder="Enter Transaction ID">
+</div>
+
+<div class="actions"><button class="add">Add Money</button><button id="buyBtn" class="buy">Buy Now</button></div>
+</section>
+
+<section class="panel rules">
+<div class="step-title"><span>4</span><h2>Rules & Conditions</h2></div>
+<ul>
+<li>শুধুমাত্র সঠিক Player ID দিয়ে অর্ডার করুন।</li>
+<li>ভুল Player ID দিলে Top-Up না পাওয়ার জন্য কর্তৃপক্ষ দায়ী নয়।</li>
+<li>একই ID-তে একই package বারবার অর্ডার করার আগে package-এর নিয়ম দেখুন।</li>
+<li>Payment করার আগে package ও মূল্য ভালোভাবে যাচাই করুন।</li>
+<li>সমস্যা হলে Transaction ID ও Order তথ্য দিয়ে Support-এ যোগাযোগ করুন।</li>
+</ul>
+</section>
+
+<section class="panel">
+<div class="step-title"><span>5</span><h2>Support</h2></div>
+<p>বাংলাদেশ সময় সকাল ৯টা – রাত ১২টা</p>
+<p><b>bKash:</b> 01344839207</p>
+<p><b>Nagad:</b> 01960261023</p>
+</section>
+</main>
+
+<footer id="support"><h3>Emon Top Up</h3><p>Game Top-Up Service</p><p>☎ 01344839207 • 01960261023</p><small>© 2026 Emon Top Up</small></footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
